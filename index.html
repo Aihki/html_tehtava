@@ -43,23 +43,17 @@
     <footer class="footeri">
       <p>Copyright</p>
     </footer>
-    <dialog
-      aria-labelledby="dialog_title"
-      aria-describedby="dialog_description"
-    >
+    <dialog aria-labelledby="dialog_title">
       <h2 id="dialog_title" class="h2">Rekisteröidy tiedoillasi</h2>
-      <img
-        src="./img/login.png"
-        alt="Illustration of Location Services"
-      />
+
+      <img src="./img/login.png" alt="Illustration of Location Services" />
       <div>
-        <form class="myform" >
+        <form class="myform">
           <label for="username">Name</label>
           <input
-            method="get"
             type="text"
-            id="nimikenttä"
-            name="username"
+            id="username"
+            name="nimikenttä"
             placeholder="Your name.."
             minlength="3"
             required
@@ -67,32 +61,31 @@
 
           <label for="email">Email</label>
           <input
-            method="get"
             type="email"
-            id="sposti"
-            name="email"
+            id="email"
+            name="sposti"
             placeholder="nestori@metropolia.fi"
             required
-            
           />
 
           <label for="pwd">Password</label>
           <input
-            method="get"
             type="password"
-            id="pass"
-            name="pwd"
+            id="pwd"
+            name="password"
             placeholder="Password.."
             required
             minlength="10"
           />
           <div class="flex flex-space-between">
             <button id="close_dialog">Close</button>
-            <input type="submit" value="Submit" style="background-color:  #0c1445;" />
+            <input
+              type="submit"
+              value="Submit"
+              style="background-color: #0c1445"
+            />
+          </div>
         </form>
-      </div>
-
-      
       </div>
     </dialog>
   </body>
