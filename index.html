@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SiipiRavintola</title>
     <link rel="stylesheet" href="./css/style.css" class="css" />
+    <script src="./js/dialog.js" defer></script>
   </head>
   <body>
     <nav>
@@ -19,32 +20,22 @@
     </nav>
     <main>
       <div class="spacer">
-        tähän tulee lisää sisältöä. tein spacer luokan että näyttäisi että tuo
-        olisi alhaalla
+        avaa dialogi
+        <button id="open_dialog">Open Dialog</button>
       </div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
+
       <div class="contact">
         <img
           src="./img/Pigeon.webp"
           class="restaurant"
           alt="picture of chicken"
         />
-        <img src="./img/ravintola.jpeg" alt="Photo" />
+        <img src="./img/ravintola.jpeg" alt="Photo" id="rafla" />
         <h2>More about us</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
           inventore harum corrupti eaque. Minima dolore voluptatum ducimus
-          quaerat a saepe provident, beatae numquam esse maxime nobis sunt, aut,
-          inventore perferendis. Nemo saepe sapiente nisi dolores distinctio
-          consequuntur quasi quia blanditiis vitae iste? Dolorem aut laboriosam
-          autem natus fugit at modi quaerat et dignissimos accusantium, beatae
-          iste, consequatur pariatur perspiciatis quia?
+          quaerat a saepe provident,...
         </p>
       </div>
     </main>
@@ -52,5 +43,57 @@
     <footer class="footeri">
       <p>Copyright</p>
     </footer>
+    <dialog
+      aria-labelledby="dialog_title"
+      aria-describedby="dialog_description"
+    >
+      <h2 id="dialog_title" class="h2">Rekisteröidy tiedoillasi</h2>
+      <img
+        src="./img/login.png"
+        alt="Illustration of Location Services"
+      />
+      <div>
+        <form class="myform" >
+          <label for="username">Name</label>
+          <input
+            method="get"
+            type="text"
+            id="nimikenttä"
+            name="username"
+            placeholder="Your name.."
+            minlength="3"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            method="get"
+            type="email"
+            id="sposti"
+            name="email"
+            placeholder="nestori@metropolia.fi"
+            required
+            
+          />
+
+          <label for="pwd">Password</label>
+          <input
+            method="get"
+            type="password"
+            id="pass"
+            name="pwd"
+            placeholder="Password.."
+            required
+            minlength="10"
+          />
+          <div class="flex flex-space-between">
+            <button id="close_dialog">Close</button>
+            <input type="submit" value="Submit" style="background-color:  #0c1445;" />
+        </form>
+      </div>
+
+      
+      </div>
+    </dialog>
   </body>
 </html>

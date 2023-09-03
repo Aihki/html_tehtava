@@ -1,19 +1,39 @@
-body {
-  margin: 0;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+* {
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+:root {
+  --bistre: #34291fff;
+  --onyx: #313938ff;
+  --pearl: #dbd2b6ff;
+  --coyote: #705c40ff;
+  --lion: #c4a273ff;
+  --paynes-gray: #49616cff;
+  --slate-gray: #6e7e84ff;
+  --paynes-gray-2: #62757cff;
+  --battleship-gray: #869195ff;
+  --slate-gray-2: #66787fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  /* dialog root muuttujat */
+  --ratio: 3.74;
+  --cta-color: rgb(0, 102, 254);
+  --light-color-bg: rgb(238, 241, 247);
+  --dark-color-bg: rgb(55, 65, 81);
+  --grey-color: rgb(107, 114, 128);
+  --leading: 0.025em;
+}
+
+body {
+  margin: 0px 150px 0px 150px;
+}
+body:has(dialog[open]) {
+  overflow-y: hidden;
+}
 h1,
 p {
   margin: 0;
-}
-img {
-  float: left;
-  max-width: 100%;
-  height: auto;
-  margin-right: 20px;
 }
 
 /*.clearfix::after {
@@ -22,6 +42,8 @@ img {
   display: table;
 }*/
 
+/* navaagtio css */
+/* ****************** */
 nav,
 main {
   display: inline-block;
@@ -30,7 +52,7 @@ main {
 }
 nav {
   margin: auto;
-  width: 70%;
+  width: 100%;
 }
 
 ul {
@@ -38,7 +60,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: var(--onyx);
   text-align: center;
 }
 nav ul {
@@ -82,25 +104,23 @@ li a:active {
   color: white;
 }
 
+/* content css */
+/* ************* */
 main {
-  width: 70%;
+  width: 100%;
 }
 
 .contact {
-  background-image: url(./img/background.png);
-  margin: 100px auto 0;
+  background-image: url(/img/background.png);
+  margin: 130px auto 0;
   border: 2px black;
-  height: 200px;
+  height: 240px;
   padding: 28px;
   position: relative;
 }
-.contact p {
-  margin: 0;
-  position: absolute;
-  top: 60%;
-  left: 53%;
 
-  transform: translate(-50%, -50%);
+#rafle {
+  float: left;
 }
 
 .restaurant {
@@ -110,13 +130,21 @@ main {
   top: -55px;
   right: 25px;
 }
+img {
+  float: left;
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* ************* */
 
 footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: black;
+  background-color: var(--onyx);
 }
 
 .footeri {
@@ -137,3 +165,122 @@ footer {
 .spacer {
   padding: 20px;
 }
+
+/* more dialog css */
+/* ************* */
+
+dialog::backdrop {
+  backdrop-filter: blur(0.1rem);
+}
+
+button {
+  display: block;
+  margin-top: 2rem;
+  width: calc(44px * var(--ratio));
+  height: 44px;
+  border-radius: calc(3px * var(--ratio));
+  border: none;
+  letter-spacing: ccalc(3 * var(--leading, 0.025em));
+  font-family: inherit;
+  color: var(--grey-color);
+  background-color: var(--light-color-bg);
+  font-size: large;
+  font-weight: 700;
+}
+
+input[type="submit"]:focus {
+  outline: none;
+  border: 0.0625rem solid transparent;
+  box-shadow: 0 0 0 0.125rem #fff, 0 0 0 0.2rem var(--dark-color-bg);
+}
+
+input[type="submit"].cta {
+  background-color: var(--cta-color);
+  color: white;
+}
+
+input[type="submit"].cta:focus {
+  box-shadow: 0 0 0 0.125rem #fff, 0 0 0 0.2rem var(--cta-color);
+}
+
+#open_dialog {
+  margin: 0 auto;
+}
+
+dialog {
+  border: none !important;
+  border-radius: calc(5px * var(--ratio));
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 1.6rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+dialog .img {
+  display: block;
+  max-width: 75%;
+  margin: 1rem 0 auto 2rem;
+}
+
+dialog .h1 {
+  margin: 2rem 0 1rem;
+  font-weight: 900;
+}
+
+dialog .h2 {
+  margin: 2rem 0 1rem;
+  font-weight: 800;
+}
+
+dialog .p {
+  color: var(--grey-color);
+  letter-spacing: var(--leading, 0.025em);
+  line-height: 1.625;
+}
+
+dialog .flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+dialog .flex.flex-space-between {
+  justify-content: space-between;
+}
+
+dialog .flex button {
+  margin: 8px auto;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #313938ff;
+  width: 50%;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.myform input:invalid {
+  background-color: rgb(250, 136, 136);
+}
+.myform input:valid {
+  background-color: aquamarine;
+}
+label {
+  font-weight: bold;
+}
+/* ***************** */
