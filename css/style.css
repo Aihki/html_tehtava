@@ -250,21 +250,18 @@ dialog .flex.flex-space-between {
 dialog .flex button {
   margin: 8px auto;
 }
-input[type="text"],
-input[type="password"],
-input[type="email"],
-select {
+
+.myform input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  background-color: white;
+  transition: border-color 2s;
+  border: 1px solid black;
+  border-left: 10px solid black;
 }
-
 input[type="submit"] {
-  background-color: #313938ff;
+  background-color: #397409;
   width: 50%;
   color: white;
   padding: 14px 20px;
@@ -273,12 +270,11 @@ input[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
 }
-
 .myform input:invalid {
-  background-color: rgb(250, 136, 136);
+  border-left-color: red;
 }
 .myform input:valid {
-  background-color: aquamarine;
+  border-left-color: rgb(16, 251, 8);
 }
 label {
   font-weight: bold;
