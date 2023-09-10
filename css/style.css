@@ -130,8 +130,8 @@ main {
 }
 
 .restaurant {
-  width: 150px;
-  height: 150px;
+  width: 105px;
+  height: 105px;
   position: absolute;
   top: -55px;
   right: 25px;
@@ -154,7 +154,7 @@ footer {
 }
 
 .footeri {
-  height: 100px;
+  height: 75px;
   color: white;
   text-align: center;
 }
@@ -357,5 +357,8 @@ label {
     display: block;
     text-align: center;
     margin-top: 10px;
+  }
+  .contact {
+    margin: 40px auto 200px;
   }
 }
