@@ -133,14 +133,15 @@ li a:active {
   justify-content: center;
   align-items: center;
 }
-.title h1 {
-  font-size: 1rem;
-}
 
 .flex-content {
   flex: 1;
   font-size: 0.9rem;
 }
+h1.flex-content {
+  font-size: 1.5rem;
+}
+
 .flex-lef-button {
   flex: 1;
   margin: 10px;
