@@ -28,10 +28,12 @@
 body {
   margin: 0px 110px 0px 110px;
 }
+html {
+  font-size: 16px;
+}
 /* body:has(dialog[open]) {
   overflow-y: hidden;
 } */
-h1,
 p {
   margin: 0;
 }
@@ -107,11 +109,92 @@ li a:active {
 
 #hero-image {
   background-image: url(../img/hero.jpg);
+  display: flex;
   background-size: cover;
   background-position: center;
+  position: relative;
   height: 300px;
   border-radius: 0 0 30px 30px;
 }
+.hero-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 270px;
+  height: 100%;
+  background-color: rgba(238, 241, 247, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title h1 {
+  font-size: 1rem;
+}
+
+.flex-content {
+  flex: 1;
+  font-size: 0.9rem;
+}
+.flex-lef-button {
+  flex: 1;
+  margin: 10px;
+  color: black;
+  background-color: #bb932e98;
+}
+.flex-lef-button:hover {
+  background-color: #bb932e;
+}
+
+.flex-lef-button:active {
+  background-color: #966f23;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-right {
+  flex: 2;
+  display: flex;
+}
+
+.menu-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.flex-menu-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+.menu-buttons {
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 37px;
+  color: black;
+  background-color: #bb932e98;
+  font-size: 0.85rem;
+}
+.menu-buttons:hover {
+  background-color: #bb932e;
+}
+
+.menu-buttons:active {
+  background-color: #966f23;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 /* content css */
 /* ************* */
 main {
@@ -360,5 +443,8 @@ label {
   }
   .contact {
     margin: 40px auto 200px;
+  }
+  .flex-menu-buttons {
+    flex-direction: column;
   }
 }
