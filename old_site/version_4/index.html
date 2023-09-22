@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SiipiRavintola</title>
+    <link rel="stylesheet" href="./css/style.css" class="css" />
+    <script src="./js/dialog.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="logo">
+          <img src="./img/logo.webp" alt="Logo" class="logo-img" />
+        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="hero-image">
+      <div class="hero-left">
+        <div class="card">
+          <h1 class="flex-content">Some damm chicken</h1>
+
+          <p class="flex-content">
+            This restaurant boasts the absolute best chicken dishes, prepared
+            with exquisite flavors and unparalleled expertise, making it a top
+            culinary destination for those seeking the ultimate chicken
+            experience.
+          </p>
+          <button class="flex-lef-button">meet the farmers</button>
+        </div>
+      </div>
+      <div class="hero-right"></div>
+    </div>
+
+    <div class="menu-selection">
+      <div class="menu-title">
+        <h2>Ruokalistat</h2>
+        <p>Katso tarkemmin lähiravintolasi ruokalistaa</p>
+      </div>
+      <div class="flex-menu-buttons">
+        <button class="menu-buttons">Tampere</button>
+        <button class="menu-buttons">Oulu</button>
+        <button class="menu-buttons">Turku</button>
+      </div>
+    </div>
+
+    <main>
+      <div class="spacer">
+        avaa dialogi
+        <button id="open_dialog">Open Dialog</button>
+      </div>
+
+      <div class="contact">
+        <img
+          src="./img/Pigeon.webp"
+          class="restaurant"
+          alt="picture of chicken"
+        />
+        <img src="./img/ravintola.jpeg" alt="Photo" class="rafla" />
+        <h2>More about us</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          facilis perferendis, repudiandae eum, iure, nesciunt explicabo
+          veritatis mollitia velit possimus error? Possimus vero repudiandae
+          impedit qui sint velit voluptates odio.
+        </p>
+      </div>
+    </main>
+
+    <footer class="footeri">
+      <p>Copyright</p>
+    </footer>
+    <dialog aria-labelledby="dialog_title">
+      <h2 id="dialog_title" class="h2">Rekisteröidy tiedoillasi</h2>
+
+      <img src="./img/login.png" alt="Illustration of Location Services" />
+      <div>
+        <form class="myform">
+          <label for="username">Name</label>
+          <input
+            type="text"
+            id="username"
+            autocomplete="name"
+            name="username"
+            placeholder="Your name.."
+            minlength="3"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="nestori@metropolia.fi"
+            pattern=".+@metropolia\.fi"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password.."
+            pattern="(?!.*[\s])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+            minlength="10"
+            required
+          />
+          <div class="flex flex-space-between">
+            <button id="close_dialog">Close</button>
+            <button type="submit">submit</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+  </body>
+</html>

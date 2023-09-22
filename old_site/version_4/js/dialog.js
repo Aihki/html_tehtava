@@ -13,9 +13,12 @@ const trapFocus = (e) => {
     const tabForwards = !e.shiftKey && document.activeElement === lastElement;
     const tabBackwards = e.shiftKey && document.activeElement === firstElement;
     if (tabForwards) {
+      // only TAB is pressed, not SHIFT simultaneously
+      // Prevent default behavior of keydown on TAB (i.e. focus next element)
       e.preventDefault();
       firstElement.focus();
     } else if (tabBackwards) {
+      // TAB and SHIFT are pressed simultaneously
       e.preventDefault();
       lastElement.focus();
     }

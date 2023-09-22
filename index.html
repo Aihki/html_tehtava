@@ -5,56 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SiipiRavintola</title>
     <link rel="stylesheet" href="./css/style.css" class="css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="./js/dialog.js" defer></script>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li class="logo">
-          <img src="./img/logo.webp" alt="Logo" class="logo-img" />
-        </li>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div id="hero-image">
-      <div class="hero-left">
-        <div class="card">
-          <h1 class="flex-content">Some damm chicken</h1>
-
-          <p class="flex-content">
-            This restaurant boasts the absolute best chicken dishes, prepared
-            with exquisite flavors and unparalleled expertise, making it a top
-            culinary destination for those seeking the ultimate chicken
-            experience.
-          </p>
-          <button class="flex-lef-button">meet the farmers</button>
-        </div>
-      </div>
-      <div class="hero-right"></div>
-    </div>
-
-    <div class="menu-selection">
-      <div class="menu-title">
-        <h2>Ruokalistat</h2>
-        <p>Katso tarkemmin lähiravintolasi ruokalistaa</p>
-      </div>
-      <div class="flex-menu-buttons">
-        <button class="menu-buttons">Tampere</button>
-        <button class="menu-buttons">Oulu</button>
-        <button class="menu-buttons">Turku</button>
-      </div>
-    </div>
+    <header>
+      <nav>
+        <ul>
+          <li class="logo">
+            <img src="./img/logo.webp" alt="Logo" class="logo-img" />
+          </li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
+      <section id="hero-image">
+        <div class="hero-left">
+          <div class="card">
+            <h1 class="flex-content">Some damm chicken</h1>
+
+            <p class="flex-content">
+              This restaurant boasts the absolute best chicken dishes, prepared
+              with exquisite flavors and unparalleled expertise, making it a top
+              culinary destination for those seeking the ultimate chicken
+              experience.
+            </p>
+            <button class="flex-lef-button">meet the farmers</button>
+          </div>
+        </div>
+        <div class="hero-right"></div>
+      </section>
+
+      <section class="menu-selection">
+        <div class="menu-title">
+          <h2>Ruokalistat</h2>
+          <p>Katso tarkemmin lähiravintolasi ruokalistaa</p>
+        </div>
+        <div class="flex-menu-buttons">
+          <button class="menu-buttons">Tampere</button>
+          <button class="menu-buttons">Oulu</button>
+          <button class="menu-buttons">Turku</button>
+        </div>
+      </section>
+
       <div class="spacer">
         avaa dialogi
         <button id="open_dialog">Open Dialog</button>
       </div>
+      <section class="grid-container">
+        <div class="grid-card1">
+          <h2>Korean Chickens wings</h2>
+          <img src="./img/wings.jpeg" alt="Image 1" />
+          <p>
+            Prepare your taste buds for an extraordinary culinary journey as we
+            present our signature dish: Crispy Fried Chicken Wings, expertly
+            glazed with our secret sweet and spicy Gochujang sauce, and
+            beautifully garnished with toasted sesame seeds and the vibrant
+            freshness of chopped green onions. This delectable masterpiece isn't
+            just a meal; it's an experience that will leave you craving for
+            more.
+          </p>
+        </div>
 
-      <div class="contact">
+        <div class="grid-card2">
+          <h2>Special kimchi</h2>
+          <img src="./img/logo.webp" alt="Image 1" />
+
+          <p>
+            Experience the bold and unforgettable flavors of our signature
+            kimchi. Crafted with the perfect balance of spice, tanginess, and
+            crunch, our kimchi elevates every dish. Whether as a side, topping,
+            or star ingredient, it promises to awaken your taste buds and leave
+            you craving for more. Taste the excitement at chickwing today. There
+            are milder and spicier version of this classic
+          </p>
+        </div>
+
+        <div class="grid-card3">
+          <h2>quality guaranteed</h2>
+          <img src="./img/logo.webp" alt="Image 1" />
+          <p>
+            At chickwing, we take pride in our unwavering commitment to
+            excellence. From the selection of the finest ingredients to the
+            meticulous craftsmanship in every step of our process, quality is
+            not just a promise; it's our unwavering guarantee.
+          </p>
+        </div>
+        <div class="grid-card4">
+          <h2>join our team</h2>
+          <img src="./img/logo.webp" alt="Image 1" />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
+            perferendis sapiente accusantium tenetur a esse obcaecati molestias,
+            quasi error aut, incidunt dolorem voluptatem laboriosam recusandae
+            fugit in possimus minus non.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact">
         <img
           src="./img/Pigeon.webp"
           class="restaurant"
@@ -68,7 +124,7 @@
           veritatis mollitia velit possimus error? Possimus vero repudiandae
           impedit qui sint velit voluptates odio.
         </p>
-      </div>
+      </section>
     </main>
 
     <footer class="footeri">
