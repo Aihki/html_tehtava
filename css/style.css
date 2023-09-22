@@ -251,6 +251,7 @@ h1.flex-content {
   grid-area: text;
   color: black;
   text-align: left;
+  margin: 20px;
 }
 .grid-card1 img,
 .grid-card2 img,
