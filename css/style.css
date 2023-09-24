@@ -206,11 +206,22 @@ h1.flex-content {
   grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
   grid-template-rows: repeat(1, 1fr);
   gap: 20px;
-  /* padding: 20px ; */
+  /*   padding: 20px; */
 }
 
 .grid-card1,
-.grid-card2,
+.grid-card2 {
+  text-align: center;
+  margin: auto;
+  background-color: #b3a1a154;
+  border-style: none;
+  border-radius: 5px;
+  display: grid;
+  height: 335px;
+  grid-template-areas:
+    ". header"
+    "img text";
+}
 .grid-card3,
 .grid-card4 {
   text-align: center;
@@ -219,8 +230,6 @@ h1.flex-content {
   border-style: none;
   border-radius: 5px;
   display: grid;
-  width: auto;
-  height: auto;
   grid-template-areas:
     ". header"
     "img text";
@@ -265,7 +274,7 @@ h1.flex-content {
 
 .contact {
   background-image: url(../img/background.png);
-  margin: 40px auto;
+  margin: 110px auto;
   padding: 40px;
   min-height: 260px;
   position: relative;
@@ -299,7 +308,7 @@ footer {
 }
 
 .footeri {
-  height: 75px;
+  height: 50px;
   color: white;
   text-align: center;
 }
@@ -445,6 +454,19 @@ label {
 /* ***************** */
 
 /* media css */
+
+@media only screen and (min-width: 2220px) {
+  .grid-container {
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(680px, 1fr));
+  }
+}
+@media only screen and (min-width: 3200px) {
+  .grid-container {
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+  }
+}
 @media only screen and (max-width: 930px) {
   body {
     margin: 0;
@@ -491,15 +513,15 @@ label {
     text-decoration: none;
   }
   .grid-container {
-    width: 100%;
     margin: auto;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
   .grid-card1,
   .grid-card2,
   .grid-card3,
   .grid-card4 {
     justify-items: center;
+    height: auto;
     grid-template-areas:
       "header"
       "img "
@@ -526,5 +548,14 @@ label {
   }
   .flex-menu-buttons {
     flex-direction: column;
+  }
+}
+@media only screen and (max-width: 450px) {
+  body {
+    margin: 0;
+  }
+  .grid-container {
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
